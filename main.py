@@ -2,7 +2,7 @@ from typing import Optional
 import pandas as pd
 from joblib import load
 from fastapi import FastAPI
-import DataModel
+from DataModel import DataModel
 
 app = FastAPI()
 
