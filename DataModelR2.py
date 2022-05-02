@@ -1,5 +1,3 @@
-from __future__ import annotations
-from typing import List
 from pydantic import BaseModel
 
 class DataModel(BaseModel):
@@ -24,12 +22,8 @@ class DataModel(BaseModel):
     income_composition_of_resources	: float
     schooling: float
 
-    #Esta función retorna los nombres de las columnas correspondientes con el modelo esxportado en joblib.
+#Esta función retorna los nombres de las columnas correspondientes con el modelo esxportado en joblib.
     def columns(self):
-        return ["Adult Mortality", "infant deaths", "Alcohol","percentage expenditure","Hepatitis B", "Measles", "BMI",
+        return ["Life expectancy", "Adult Mortality", "infant deaths", "Alcohol","percentage expenditure","Hepatitis B", "Measles", "BMI",
                 "under-five deaths", "Polio", "Total expenditure", "Diphtheria", "HIV/AIDS", "DGP", "Population",
                 "thinness 10-19 years", "thinness 5-9 years", "Income composition of resources", "Schooling"]
-
-class Config:
-    orm_mode = True
-
